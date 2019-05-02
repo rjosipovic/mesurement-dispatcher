@@ -1,0 +1,13 @@
+application:
+  collector:
+    endpoint: "http://ghost:8080/EnviromentCollector/webresources/collector/"
+  mesurements:
+    - mesurement:
+      name: "temperature"
+      script: "${user.dir}/src/test/resources/mesurement-scripts/temperature.sh"
+    - mesurement:
+      name: "pressure"
+      script: "${user.dir}/src/test/resources/mesurement-scripts/pressure.sh"
+    - mesurement:
+      name: "humidity"
+      script: "${user.dir}/src/test/resources/mesurement-scripts/humidity.sh"

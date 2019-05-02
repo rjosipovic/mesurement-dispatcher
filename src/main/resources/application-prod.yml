@@ -1,0 +1,20 @@
+server:
+  port: 8080
+logging:
+  level:
+    home.mesurement.dispatcher: DEBUG
+  name: mesurement-dispatcher.log
+  path: /var/log/mesurement-dispatcher
+application:
+  collector:
+    endpoint: "http://ghost:8080/EnviromentCollector/webresources/collector/"
+  mesurements:
+    - mesurement:
+      name: "temperature"
+      script: "/home/sense/EnviromentMonitor/scripts/temperature.sh"
+    - mesurement:
+      name: "pressure"
+      script: "/home/sense/EnviromentMonitor/scripts/pressure.sh"
+    - mesurement:
+      name: "humidity"
+      script: "/home/sense/EnviromentMonitor/scripts/humidity.sh"
